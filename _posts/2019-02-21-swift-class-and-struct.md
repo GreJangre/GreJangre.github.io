@@ -39,7 +39,7 @@ comments: true
 ### 코드를 통해 보자면
 <br>
 
-~~~Swift
+~~~swift
 struct ValueType {
   var property = 1
 }
@@ -60,7 +60,7 @@ print("second struct instance property : \(secondStructInstance.property)") // 2
 <br>
 <br>
 
-~~~Swift
+~~~swift
 class ReferenceType {
   var property = 1
 }
@@ -77,7 +77,7 @@ print("second class reference property : \(secondClassReference.porperty)")  // 
 변수로 선언한 인스턴스(secondClassReference)의 프로퍼티 값을 변경하면 first...와 second... 모두 한 클래스의 주소를 참조하기 때문에 둘 다 값이 바뀌는 것을 확인할 수 있다.
 
 
-~~~Swift
+~~~swift
 struct Student {
   var name: String = "unknown"
   var subject: String = "Swift"
@@ -103,7 +103,7 @@ hyun.Introduce()  // 저는 Swift과목을 듣는 unknown입니다.
 <br>
 <br>
 
-~~~Swift
+~~~swift
 class Student {
   var name: String = "unknown"
   var subject: String = "Swift"
