@@ -39,7 +39,7 @@ comments: true
 ### 코드를 통해 보자면
 <br>
 
-```Swift
+~~~Swift
 struct ValueType {
   var property = 1
 }
@@ -50,7 +50,7 @@ secondStructInstance.property = 2
 
 print("first struct instance property : \(firstStructInstance.property)")   // 1
 print("second struct instance property : \(secondStructInstance.property)") // 2
-```
+~~~
 
 구조체는 값에 의한 전달을 한다는 것을 보여주는 예제이다.<br>
 상수(firstStructureInstance)에는 구조체 인스턴스를 할당하고 변수(secondStructureInstance)에는 위에서 만든 상수를 할당했다.
@@ -60,7 +60,7 @@ print("second struct instance property : \(secondStructInstance.property)") // 2
 <br>
 <br>
 
-```Swift
+~~~Swift
 class ReferenceType {
   var property = 1
 }
@@ -71,13 +71,13 @@ secondClassReference.property = 2
 
 print("first class reference property : \(firstClassReference.porperty)")  // 2
 print("second class reference property : \(secondClassReference.porperty)")  // 2
-```
+~~~
 
 클래스는 주소에 의한 전달을 한다는 것을 보여주는 예제이다.<br>
 변수로 선언한 인스턴스(secondClassReference)의 프로퍼티 값을 변경하면 first...와 second... 모두 한 클래스의 주소를 참조하기 때문에 둘 다 값이 바뀌는 것을 확인할 수 있다.
 
 
-```Swift
+~~~Swift
 struct Student {
   var name: String = "unknown"
   var subject: String = "Swift"
@@ -96,13 +96,14 @@ jangre.Introduce()  // 저는 스위프트과목을 듣는 jangre입니다.
 let hyun: Student = Student()
 //hyun.name = "hyun"  // 컴파일 오류 -> 불변 인스턴스이므로 프로퍼티 값 변경 불가
 hyun.Introduce()  // 저는 Swift과목을 듣는 unknown입니다.
-```
+~~~
+
 구조체의 경우, 변수로 선언된 인스턴스는 프로퍼티값을 변경할 수 있다. 하지만 상수로 선언된 인스턴스는 프로퍼티 값을 변경하면 값에 의한 전달로 인스턴스값도 변경되기 때문에 변경이 불가능하다.<br>
 한 마디로 프로퍼티값을 변경하게 되면 인스턴스 자체의 값도 변경이 된다는 말이다.
 <br>
 <br>
 
-```Swift
+~~~Swift
 class Student {
   var name: String = "unknown"
   var subject: String = "Swift"
@@ -121,5 +122,6 @@ jangre.Introduce()  // 저는 스위프트과목을 듣는 jangre입니다.
 let hyun: Student = Student()
 hyun.name = "hyun"
 hyun.Introduce()  // 저는 Swift과목을 듣는 hyun입니다.
-```
+~~~
+
 하지만 클래스의 경우, 변수든 상수든 상관없이 프로퍼티값을 변경할 수 있다. 그 이유는 실제 저장된 메모리 주소에 의해 참조되어 프로퍼티 값이 바뀐다 해도 할당된 메모리 주소에는 영향을 주지 않기 때문에 변경이 가능하다.
