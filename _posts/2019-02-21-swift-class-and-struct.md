@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "스위프트_2"
+title: "Swift - 값타입과 참조타입"
 tags: [스위프트, swift, ios, class, struct, 값타입, 참조타입]
 comments: true
 ---
